@@ -12,5 +12,4 @@ while (i<=100) {
 	}
 	i++;
 	console.log("\n");
-	continue;
 }
