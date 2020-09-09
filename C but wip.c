@@ -23,7 +23,7 @@ void fizzbuzz() {
         } else if (i%5==0) {
             printf("Buzz");
         } else {
-            printf("%i", i);
+            printf("%d", i);
     }
     i++;
     sleep(1000);
