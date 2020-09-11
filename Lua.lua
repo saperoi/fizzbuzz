@@ -4,22 +4,25 @@ function wait(seconds)
 end
 -- I found the above code on codegrepper.com, that part isn't mine.
 
-local i
-i = 1
+local i = 1
+
 while( i <= 100 )
 do
-  if( i % 3 == 0 and i % 5 == 0)
+  local result = ""
+  if( i % 3 == 0 )
   then
-    print("FizzBuzz")
-  elseif( i % 3 == 0 )
+    result = result .. "Fizz"
+  end
+  if( i % 5 == 0 )
   then
-    print("Fizz")
-  elseif( i % 5 == 0 )
+    result = result .. "Buzz"
+  end
+  if( result == "" )
   then
-    print ("Buzz")
-  else
     print( i )
+  else
+    print( result )
   end
   i = i + 1
-  wait(1)
+  wait( 1 )
 end
