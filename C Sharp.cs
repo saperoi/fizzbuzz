@@ -3,22 +3,12 @@ using System.Threading;
 using System.Threading.Tasks;
 class MainClass {
   public static void Main (string[] args) {
-    int i;
-    i = 1;
-    while (i <= 100)
-    {
-      if (i%3==0 && i%5==0)
-      {
-        Console.WriteLine ("FizzBuzz");
-      } else if (i%3==0)
-      {
-        Console.WriteLine ("Fizz");
-      } else if (i%5==0)
-      {
-       Console.WriteLine ("Buzz");
-      } else {
-     Console.WriteLine (i);
-      }
+    int i = 1;
+    while (i <= 100) {
+      string result = "";
+      if (i%3==0){result+="Fizz";}
+      if (i%5==0){result+="Buzz";}
+      if (result==""){Console.WriteLine(i);} else {Console.WriteLine(result);}
       i++;
       Thread.Sleep(1000);
     }
