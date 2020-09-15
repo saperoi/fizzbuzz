@@ -11,15 +11,18 @@ void setup() {
 
 void loop() {
   lcd.setCursor(0,0);
-  while (t<=100) { // Replace 100 here if you want it to go up to a different number
-    if (t%3==0 && t%5==0) {
-      lcd.print("FizzBuzz");
-    } else if (t%3==0) {
-      lcd.print("Fizz    ");
-    } else if (t%5==0) {
-      lcd.print("Buzz    ");
-    } else {
+  while (t<=100) {
+    String result = "";
+    if (t%3==0) {
+      result = result + "Fizz";
+    }
+    if (t%5==0) {
+      result = result + "Buzz";
+    }
+    if (result=="") {
       lcd.print(t + spaceempty);
+    } else {
+      lcd.print(result + spaceempty);
     }
     t++;
     delay(1000);
