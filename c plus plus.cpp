@@ -1,5 +1,6 @@
-#include <Windows.h>
 #include <iostream>
+#include <string>
+#include <unistd.h>
 
 using namespace std;
 
@@ -7,16 +8,15 @@ int main()
 {
     int i = 1;
     while(i<=15){
-        if(i%3==0 && i%5==0){
-            cout << "FizzBuzz" << endl;
-        } else if (i%3==0) {
-            cout << "Fizz" << endl;
-        } else if (i%5==0) {
-            cout << "Buzz" << endl;
-        } else {
+      string result = "";
+      if(i%3==0){result+="Fizz";}  
+      if (i%5==0) {result+="Buzz";}
+      if (result=="") {
             cout << i << endl;
-        }
-        i++;
-        sleep(1);
+      } else {
+            cout << result << endl;
+      }
+      i++;
+      sleep(1);
     }
 }
